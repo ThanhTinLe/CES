@@ -1,11 +1,12 @@
-import React from 'react'
-import { Breadcrumb, Progress } from 'antd';
+import React, { useState } from 'react'
+import { Breadcrumb, Progress, Input, Modal } from 'antd';
 import { NavLink } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import { WarningOutlined } from '@ant-design/icons';
 
 export default function CharityDetail() {
 
@@ -16,6 +17,20 @@ export default function CharityDetail() {
     };
     const handleChange2 = (event, newValue) => {
         setValue2(newValue);
+    };
+    const { TextArea } = Input;
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
     };
 
     return (
@@ -82,10 +97,20 @@ export default function CharityDetail() {
                                 <div className="alert alert-light">
                                     <Box sx={{ width: '100%', typography: 'body1' }}>
                                         <TabContext value={value}>
-                                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+                                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="d-flex" style={{ justifyContent: 'space-between' }}>
                                                 <TabList onChange={handleChange} aria-label="lab API tabs example">
                                                     <Tab label="1:00 PM" value="1" />
                                                 </TabList>
+                                                <div>
+                                                    <div style={{ cursor: 'pointer' }} onClick={showModal}>
+                                                        <WarningOutlined />
+                                                    </div>
+
+                                                    <Modal title="Báo cáo hoạt động" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                                                        <h5>Lý do báo cáo</h5>
+                                                        <TextArea rows={4} />
+                                                    </Modal>
+                                                </div>
                                             </Box>
                                             <TabPanel value="1">
                                                 <h6 className="row"><span className="col-6">Thời gian: </span><span className="col-6 text-dark">1:00 PM</span></h6>
@@ -112,12 +137,22 @@ export default function CharityDetail() {
                                 <div className="alert alert-light">
                                     <Box sx={{ width: '100%', typography: 'body1' }}>
                                         <TabContext value={value2}>
-                                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
+                                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="d-flex" style={{ justifyContent: 'space-between' }}>
                                                 <TabList onChange={handleChange2} aria-label="lab API tabs example">
                                                     <Tab label="5:00 AM" value="2" />
                                                     <Tab label="7:00 AM" value="3" />
                                                     <Tab label="11:00 AM" value="4" />
                                                 </TabList>
+                                                <div>
+                                                    <div style={{ cursor: 'pointer' }} onClick={showModal}>
+                                                        <WarningOutlined />
+                                                    </div>
+
+                                                    <Modal title="Báo cáo hoạt động" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                                                        <h5>Lý do báo cáo</h5>
+                                                        <TextArea rows={4} />
+                                                    </Modal>
+                                                </div>
                                             </Box>
                                             <TabPanel value="2">
                                                 <h6 className="row"><span className="col-6">Thời gian: </span><span className="col-6 text-dark">5:00 AM</span></h6>

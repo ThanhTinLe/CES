@@ -1,8 +1,26 @@
-import React from 'react'
-import { Breadcrumb, Card, Progress } from 'antd';
+import React, { useState } from 'react'
+import { Breadcrumb, Card, Progress, Modal, Button, Input } from 'antd';
+import {  WarningOutlined } from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
 
 export default function HomePage() {
+
+
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+    const { TextArea } = Input;
+
     return (
         <div className="container">
             <div className="bg-white p-2">
@@ -15,7 +33,16 @@ export default function HomePage() {
             <div className="mt-4">
                 <h2>Các chiến dịch đã tài trợ</h2>
                 <div className="mb-4">
-                    <Card title="Tiếp tế lương thực cho TP.HCM" extra={<NavLink to="/chatitydetail">Chi tiết chiến dịch <i class="fa fa-hand-point-right"></i></NavLink>} >
+                    <Card title="Tiếp tế lương thực cho TP.HCM" extra={<div className="ml-3">
+                        <div style={{ cursor: 'pointer' }} onClick={showModal}>
+                            <WarningOutlined />
+                        </div>
+
+                        <Modal title="Báo cáo chiến dịch" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                            <h5>Lý do báo cáo</h5>
+                            <TextArea rows={4} />
+                        </Modal>
+                    </div>} >
                         <div className="row">
                             <div className="col-9">
                                 <p className="mt-3 mb-3 row"><span className="col-6">Quỹ từ thiện: </span><span className="col-6">350,000,000 VNĐ</span></p>
@@ -36,12 +63,24 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <h6 className="text-center">Tiến độ giải ngân</h6>
+                                <div className="text-right mt-3">
+                                    <NavLink to="/chatitydetail">Chi tiết chiến dịch <i class="fa fa-hand-point-right"></i></NavLink>
+                                </div>
                             </div>
                         </div>
                     </Card>
                 </div>
                 <div className="mb-4">
-                    <Card title="Cứu Trợ lũ lụt miền trung" extra={<NavLink to="/chatitydetail">Chi tiết chiến dịch <i class="fa fa-hand-point-right"></i></NavLink>} >
+                    <Card title="Cứu Trợ lũ lụt miền trung" extra={<div className="ml-3">
+                        <div style={{ cursor: 'pointer' }} onClick={showModal}>
+                            <WarningOutlined />
+                        </div>
+
+                        <Modal title="Báo cáo chiến dịch" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                            <h5>Lý do báo cáo</h5>
+                            <TextArea rows={4} />
+                        </Modal>
+                    </div>} >
                         <div className="row">
                             <div className="col-9">
                                 <p className="mt-3 mb-3 row"><span className="col-6">Quỹ từ thiện: </span><span className="col-6">1,000,000,000 VNĐ</span></p>
@@ -62,12 +101,24 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <h6 className="text-center">Tiến độ giải ngân</h6>
+                                <div className="text-right mt-3">
+                                    <NavLink to="/chatitydetail">Chi tiết chiến dịch <i class="fa fa-hand-point-right"></i></NavLink>
+                                </div>
                             </div>
                         </div>
                     </Card>
                 </div>
                 <div className="mb-4">
-                    <Card title="Xây cầu bản Chang" extra={<NavLink to="/chatitydetail">Chi tiết chiến dịch <i class="fa fa-hand-point-right"></i></NavLink>} >
+                    <Card title="Xây cầu bản Chang" extra={<div className="ml-3">
+                        <div style={{ cursor: 'pointer' }} onClick={showModal}>
+                            <WarningOutlined />
+                        </div>
+
+                        <Modal title="Báo cáo chiến dịch" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                            <h5>Lý do báo cáo</h5>
+                            <TextArea rows={4} />
+                        </Modal>
+                    </div>} >
                         <div className="row">
                             <div className="col-9">
                                 <p className="mt-3 mb-3 row"><span className="col-6">Quỹ từ thiện: </span><span className="col-6">200,000,000 VNĐ</span></p>
@@ -88,6 +139,10 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <h6 className="text-center">Tiến độ giải ngân</h6>
+
+                                <div className="text-right mt-3">
+                                    <NavLink to="/chatitydetail">Chi tiết chiến dịch <i class="fa fa-hand-point-right"></i></NavLink>
+                                </div>
                             </div>
                         </div>
                     </Card>
