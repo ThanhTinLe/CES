@@ -147,7 +147,7 @@ export default function CharityDetail() {
                         >
                           <Tab label="1:00 PM" value="1" />
                         </TabList>
-                        <div>
+                        {/* <div>
                           <div
                             style={{
                               cursor: "pointer",
@@ -171,7 +171,7 @@ export default function CharityDetail() {
                             <h5>Lý do báo cáo</h5>
                             <TextArea rows={4} />
                           </Modal>
-                        </div>
+                        </div> */}
                       </Box>
                       <TabPanel value="1">
                         <h6 className="row">
@@ -231,7 +231,7 @@ export default function CharityDetail() {
                           <Tab label="7:00 AM" value="3" />
                           <Tab label="11:00 AM" value="4" />
                         </TabList>
-                        <div>
+                        {/* <div>
                           <div
                             style={{
                               cursor: "pointer",
@@ -255,7 +255,7 @@ export default function CharityDetail() {
                             <h5>Lý do báo cáo</h5>
                             <TextArea rows={4} />
                           </Modal>
-                        </div>
+                        </div> */}
                       </Box>
                       <TabPanel value="2">
                         <h6 className="row">
