@@ -9,6 +9,7 @@ import HomePage from './Pages/HomePage';
 import UserInfo from './Pages/UserInfo';
 import CharityDetail from './Pages/CharityDetail';
 import ActivityDetail from './Pages/ActivityDetail';
+import ActivityDetail1 from './Pages/ActivityDetail1';
 
 export const history = createBrowserHistory();
 
@@ -22,6 +23,7 @@ function App() {
         <HomeTemplate exact path="/info" component={UserInfo} />
         <HomeTemplate exact path="/chatitydetail" component={CharityDetail} />
         <HomeTemplate exact path="/activitydetail" component={ActivityDetail} />
+        <HomeTemplate exact path="/activitydetail-01" component={ActivityDetail1} />
       </Switch>
     </Router>
   );
