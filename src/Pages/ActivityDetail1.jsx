@@ -113,15 +113,23 @@ export default function ActivityDetail1() {
                             <div className="alert alert-light">
                                 <div className="m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-map-marker-alt"></i> Địa điểm thực hiện:</h5>
-                                    <span className="ml-4 text-dark">•  268 Tô Hiến Thành, Phường 15, Quận 10, Thành phố Hồ Chí Minh</span>
+                                    <span className="ml-4 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>•  268 Tô Hiến Thành, Phường 15, Quận 10, Thành phố Hồ Chí Minh</span>
                                 </div>
                                 <div className="d-flex m-3">
-                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clock"></i> Thời gian:</h5>
-                                    <span className="ml-3 text-dark">18/09/2021</span>
+                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clipboard-check"></i> Số lượng:</h5>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>5 xe tải - loại 0.5 -> 1 tấn</span>
+                                </div>
+                                <div className="d-flex m-3">
+                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clock"></i> Thời gian bắt đầu:</h5>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>18/09/2021</span>
+                                </div>
+                                <div className="d-flex m-3">
+                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clock"></i> Thời gian kết thúc:</h5>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>18/09/2021</span>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-dollar-sign"></i> Tổng số tiền đã chi:</h5>
-                                    <span className="ml-3 text-dark">10,000,000 VNĐ</span>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>10,000,000 VNĐ</span>
                                 </div>
                                 <div className="m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clipboard-check"></i> Mô tả chi tiết:</h5>
@@ -135,15 +143,15 @@ export default function ActivityDetail1() {
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-user"></i> Người thực hiện:</h5>
-                                    <span className="ml-3 text-dark">Nguyễn Văn An</span>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>Nguyễn Văn An</span>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-user-check"></i> Người kiểm duyệt:</h5>
-                                    <span className="ml-3 text-dark">Lê Duy Tuấn Vũ</span>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>Lê Duy Tuấn Vũ</span>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-check-circle"></i> Trạng thái: </h5>
-                                    <p className="ml-3 text-dark">Đã hoàn thành</p>
+                                    <p className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>Đã hoàn thành</p>
                                 </div>
                             </div>
                         </div>

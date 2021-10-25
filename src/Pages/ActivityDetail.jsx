@@ -71,7 +71,7 @@ export default function ActivityDetail() {
                             fontSize: '50px',
                             color: 'white',
                             right: '15px',
-                            bottom: '157px'
+                            bottom: '167px'
                         }}>
                             +5
                         </div>
@@ -116,34 +116,42 @@ export default function ActivityDetail() {
                                     <span className="ml-4 text-dark">•  230 đường Man Thiện, TP. thủ đức, TP. Hồ Chí Minh</span>
                                 </div>
                                 <div className="d-flex m-3">
-                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clock"></i> Thời gian:</h5>
-                                    <span className="ml-3 text-dark">19/09/2021</span>
+                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clipboard-check"></i> Số lượng:</h5>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>1400 thùng mì</span>
+                                </div>
+                                <div className="d-flex m-3">
+                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clock"></i> Thời gian bắt đầu:</h5>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>19/09/2021</span>
+                                </div>
+                                <div className="d-flex m-3">
+                                    <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clock"></i> Thời gian hết thúc:</h5>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>20/09/2021</span>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-dollar-sign"></i> Tổng số tiền đã chi:</h5>
-                                    <span className="ml-3 text-dark">142,500,000 VNĐ</span>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>142,500,000 VNĐ</span>
                                 </div>
                                 <div className="m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-clipboard-check"></i> Mô tả chi tiết:</h5>
                                     <div className="ml-4">
                                         <span className="text-dark">
                                             •  Vào lúc 5:00AM 19/09/2021 đã mua 1400 thùng mì giá 100.000VNĐ/thùng tại tạp hóa Thành Tín TP HCM. <br />
-                                            •  Vào lúc 7:00AM 19/09/2021 đã mua 40KG túi ni lông loại 10KG giá 50.000VNĐ/KG tại đại lí túi nilông Ngọc Hoa. <br />
-                                            •  Vào lúc 11:00AM 19/09/2021 đã mua 10 thùng nước suối tại tạp hoá Thành Tín cho đoàn công tác từ thiện. <br />
+                                            {/* •  Vào lúc 7:00AM 19/09/2021 đã mua 40KG túi ni lông loại 10KG giá 50.000VNĐ/KG tại đại lí túi nilông Ngọc Hoa. <br />
+                                            •  Vào lúc 11:00AM 19/09/2021 đã mua 10 thùng nước suối tại tạp hoá Thành Tín cho đoàn công tác từ thiện. <br /> */}
                                         </span>
                                     </div>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-user"></i> Người thực hiện:</h5>
-                                    <span className="ml-3 text-dark">Đỗ Thị Thảo</span>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>Đỗ Thị Thảo</span>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-user-check"></i> Người kiểm duyệt:</h5>
-                                    <span className="ml-3 text-dark">Lê Duy Tuấn Vũ</span>
+                                    <span className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>Lê Duy Tuấn Vũ</span>
                                 </div>
                                 <div className="d-flex m-3">
                                     <h5><i style={{ color: '#004d00', width: '20px' }} class="fa fa-check-circle"></i> Trạng thái: </h5>
-                                    <p className="ml-3 text-dark">Đã hoàn thành</p>
+                                    <p className="ml-3 text-dark d-flex" style={{alignItems:'center', marginBottom:'5px'}}>Đã hoàn thành</p>
                                 </div>
                             </div>
                         </div>
